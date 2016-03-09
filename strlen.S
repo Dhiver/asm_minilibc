@@ -1,8 +1,8 @@
 [BITS 64]
+section .text
+	global	my_strlen
 
-global	strlen
-
-strlen:
+my_strlen:
 	push	rbp			; saving stack
 	mov	rbp, rsp
 
