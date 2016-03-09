@@ -1,6 +1,6 @@
 [BITS 64]
 section .text
-	global	my_strlen
+	global	strlen
 
 my_strlen:
 	push	rbp			; saving stack
