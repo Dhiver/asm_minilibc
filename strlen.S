@@ -1,8 +1,8 @@
 [BITS 64]
 section .text
-	global	strlen
+	global	strlen:function
 
-my_strlen:
+strlen:
 	push	rbp			; saving stack
 	mov	rbp, rsp
 
@@ -15,7 +15,7 @@ _loop:
 	jmp	_loop			; call _loop again
 
 _end:
+	mov	rax, rcx		; Set return value
 	mov	rsp, rbp		; restore stack
 	pop	rbp
-	mov	rax, rcx		; Set return value
 	ret				; return value

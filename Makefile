@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Feb 25 14:48:56 2016 Bastien DHIVER
-## Last update Wed Mar 09 14:17:47 2016 Bastien DHIVER
+## Last update Thu Mar 10 14:01:43 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -19,7 +19,8 @@ ASFLAGS	+= -f elf64
 NAME	= libasm.so
 
 SRCS	= strlen.S	\
-	  strdup.S
+	  strdup.S	\
+	  strchr.S
 
 OBJS	= $(SRCS:.S=.o)
 

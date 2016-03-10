@@ -1,20 +1,20 @@
 [BITS 64]
 
 section .text
-	global	strdup
+	global	strdup:function
 	extern	strlen
 	extern	malloc	
 
-my_strdup:
+strdup:
 	push	rbp			; saving stack
 	mov	rbp, rsp
 
-	call	strlen wrt ..plt
+	push	rdi			; push rdi on the stack
+	call	strlen			wrt ..plt
 	mov	rcx, rax		; move strlen return in rcx
 	inc	rcx			; Add \0 len
-	push	rdi			; push rdi on the stack
 	mov	rdi, rcx		; malloc(rcx)
-	call	malloc wrt ..plt
+	call	malloc			wrt ..plt
 	test	rax, rax		; Test malloc return
 	jz	_failure_exit		; If malloc return 0 -> quit
 	pop	rdi			; restore rdi
