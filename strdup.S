@@ -1,15 +1,15 @@
 [BITS 64]
 
 section .text
-	global	my_strdup
-	extern	my_strlen
+	global	strdup
+	extern	strlen
 	extern	malloc	
 
 my_strdup:
 	push	rbp			; saving stack
 	mov	rbp, rsp
 
-	call	my_strlen wrt ..plt
+	call	strlen wrt ..plt
 	mov	rcx, rax		; move strlen return in rcx
 	inc	rcx			; Add \0 len
 	push	rdi			; push rdi on the stack
