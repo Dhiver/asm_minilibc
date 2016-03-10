@@ -1,23 +1,30 @@
 [BITS 64]
-section .text
-	global strchr
+
+global	strchr:function
 
 strchr:
-	push	rbp
+	push	rbp		; saving stack
 	mov	rbp, rsp
 
-	mov	bl, BYTE[rdi + 8]
 _loop:
-	cmp	BYTE[rdi], 0
-	je	_end
-	cmp	BYTE[rdi], bl
-	je	_find
+	cmp	BYTE[rdi], 0	; compare current char with 0
+	je	_exit_zero
+	cmp	BYTE[rdi], sil	; sil are the last 8 bit from rsi
+	je	_end_ok
 	inc	rdi
 	jmp	_loop
-
-_find:	
+	
+_end_ok:
 	mov	rax, rdi
+	call	_end
+	ret
+
 _end:
-	mov	rsp, rbp
+	mov	rsp, rbp	; restore stack
 	pop	rbp
+	ret
+
+_exit_zero:
+	mov	rax, 0
+	call	_end
 	ret
