@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Feb 25 14:48:56 2016 Bastien DHIVER
-## Last update Thu Mar 10 21:56:08 2016 Bastien DHIVER
+## Last update Thu Mar 10 22:50:16 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -21,7 +21,8 @@ NAME	= libasm.so
 SRCS	= strlen.S	\
 	  strdup.S	\
 	  strchr.S	\
-	  memset.S
+	  memset.S	\
+	  memcpy.S
 
 OBJS	= $(SRCS:.S=.o)
 

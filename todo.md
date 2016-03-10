@@ -3,7 +3,7 @@
 * [x] strlen
 * [x] strchr
 * [x] memset
-* [ ] memcpy
+* [x] memcpy
 * [/] strcmp
 * [ ] memmove
 * [/] strncmp
@@ -13,6 +13,22 @@
 * [ ] strpbrk
 * [ ] strcspn
 
-# Bonus
+## Bonus
 
 * [X] strdup
+
+## Unit tests
+
+* [ ] strlen
+* [ ] strchr
+* [ ] memset
+* [ ] memcpy
+* [ ] strcmp
+* [ ] memmove
+* [ ] strncmp
+* [ ] strcasecmp
+* [ ] rindex
+* [ ] strstr
+* [ ] strpbrk
+* [ ] strcspn
+* [ ] strdup
