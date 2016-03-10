@@ -1,8 +1,8 @@
 # TODO
 
-* [X] strlen
-* [X] strchr
-* [ ] memset
+* [x] strlen
+* [x] strchr
+* [x] memset
 * [ ] memcpy
 * [/] strcmp
 * [ ] memmove
