@@ -2,7 +2,7 @@ CC	= gcc
 
 RM	= rm -f
 
-CFLAGS	+= -W -Wall -Wextra -pedantic
+CFLAGS	+= -W -Wextra -pedantic
 CFLAGS	+= -Werror
 CFLAGS	+= -I../include/ -I.
 
@@ -13,7 +13,9 @@ NAME	= run_for_tests
 NOWHERE	= /dev/null
 
 SRCS	= $(SRCF)test_main.c		\
-	  $(SRCF)tests_strlen.c
+	  $(SRCF)tests_strlen.c		\
+	  $(SRCF)tests_strchr.c		\
+	  $(SRCF)tests_memset.c
 
 OBJS	= $(SRCS:.c=.o)
 

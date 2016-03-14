@@ -19,9 +19,9 @@
 
 ## Unit tests
 
-* [ ] strlen
-* [ ] strchr
-* [ ] memset
+* [x] strlen
+* [x] strchr
+* [x] memset
 * [ ] memcpy
 * [ ] strcmp
 * [ ] memmove
