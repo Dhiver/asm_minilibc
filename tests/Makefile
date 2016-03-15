@@ -4,6 +4,7 @@ RM	= rm -f
 
 CFLAGS	+= -W -Wextra -pedantic
 CFLAGS	+= -Werror
+CFLAGS	+= -g
 CFLAGS	+= -I../include/ -I.
 
 SLIB	= ../libasm.so
@@ -15,7 +16,8 @@ NOWHERE	= /dev/null
 SRCS	= $(SRCF)test_main.c		\
 	  $(SRCF)tests_strlen.c		\
 	  $(SRCF)tests_strchr.c		\
-	  $(SRCF)tests_memset.c
+	  $(SRCF)tests_memset.c		\
+	  $(SRCF)tests_memcpy.c
 
 OBJS	= $(SRCS:.c=.o)
 
