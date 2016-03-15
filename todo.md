@@ -32,3 +32,5 @@
 * [ ] strpbrk
 * [ ] strcspn
 * [ ] strdup
+
+* Check size\_t when param type in size\_t
