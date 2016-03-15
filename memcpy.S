@@ -10,18 +10,16 @@ memcpy:
 
 	push	rdi
 _loop:
-	cmp	BYTE[rsi], 0
+	cmp	rdx, 0
 	je	_end
-	mov	BYTE[rdi], sil
+	mov	bl, BYTE[rsi]
+	mov	BYTE[rdi], bl
 	inc	rsi
 	inc	rdi
+	dec	rdx
 	jmp	_loop
 _end:
-	inc	rsi
-	mov	BYTE[rsi], 0
-	pop	rdi
-	mov	rax, rdi
-
+	pop	rax
 	mov	rsp, rbp
 	pop	rbp
 	ret
