@@ -19,9 +19,9 @@
 
 ## Unit tests
 
-* [ ] strlen
-* [ ] strchr
-* [ ] memset
+* [x] strlen
+* [x] strchr
+* [x] memset
 * [ ] memcpy
 * [ ] strcmp
 * [ ] memmove
@@ -32,3 +32,5 @@
 * [ ] strpbrk
 * [ ] strcspn
 * [ ] strdup
+
+* Check size\_t when param type in size\_t
