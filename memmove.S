@@ -14,7 +14,6 @@ memmove:
 
 	cmp	rdi, rsi
 	jle	_call_memcpy
-	xor	rbx, rbx
 	add	rdi, rdx
 	add	rsi, rdx
 _loop:

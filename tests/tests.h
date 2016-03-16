@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Mon Mar 14 23:53:02 2016 Bastien DHIVER
-** Last update Tue Mar 15 20:18:46 2016 Bastien DHIVER
+** Last update Wed Mar 16 23:48:51 2016 Bastien DHIVER
 */
 
 #ifndef TESTS_H_
@@ -28,5 +28,8 @@ void		tests_memcpy(void);
 
 void		*memmove(void *, const void *, size_t);
 void		tests_memmove(void);
+
+char		*rindex(const char *, int);
+void		tests_rindex(void);
 
 #endif /* !TESTS_H_ */

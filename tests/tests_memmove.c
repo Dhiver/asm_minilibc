@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Tue Mar 15 20:17:44 2016 Bastien DHIVER
-** Last update Tue Mar 15 21:07:05 2016 Bastien DHIVER
+** Last update Thu Mar 17 00:02:44 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -31,9 +31,5 @@ void	tests_memmove(void)
     assert(buf[i] == 'a');
   assert(memmove(str + 20, str + 15, 11) == str + 20);
   while (*str2)
-    {
-      printf("I see str = %c\n", *str);
-      printf("I see str2 = %c\n", *str2);
-      assert(*str++ == *str2++);
-    }
+    assert(*str++ == *str2++);
 }

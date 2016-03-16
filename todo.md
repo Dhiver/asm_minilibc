@@ -8,7 +8,7 @@
 * [x] memmove
 * [/] strncmp
 * [ ] strcasecmp
-* [ ] rindex
+* [x] rindex
 * [ ] strstr
 * [ ] strpbrk
 * [ ] strcspn
@@ -27,7 +27,7 @@
 * [x] memmove
 * [ ] strncmp
 * [ ] strcasecmp
-* [ ] rindex
+* [x] rindex
 * [ ] strstr
 * [ ] strpbrk
 * [ ] strcspn
