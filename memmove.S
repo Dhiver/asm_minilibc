@@ -9,22 +9,23 @@ memmove:
 	mov	rbp, rsp
 
 	push	rdi
-	cmp	rdx, 0
+	cmp	rdx, 0		; if third arg is 0 -> do nothing
 	je	_end
 
-	cmp	rsi, rdi
+	cmp	rdi, rsi
 	jle	_call_memcpy
 	xor	rbx, rbx
 	add	rdi, rdx
 	add	rsi, rdx
 _loop:
 	cmp	rdx, 0
-	jmp	_end
+	je	_end
 	dec	rdi
 	dec	rsi
-	mov	bl, BYTE[rdi]
-	mov	sil, bl
+	mov	bl, BYTE[rsi]
+	mov	BYTE[rdi], bl
 	dec	rdx
+	jmp	_loop
 
 _call_memcpy:
 	pop     rdi

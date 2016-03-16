@@ -5,7 +5,7 @@
 * [x] memset
 * [x] memcpy
 * [/] strcmp
-* [/] memmove
+* [x] memmove
 * [/] strncmp
 * [ ] strcasecmp
 * [ ] rindex
@@ -22,9 +22,9 @@
 * [x] strlen
 * [x] strchr
 * [x] memset
-* [ ] memcpy
+* [x] memcpy
 * [ ] strcmp
-* [ ] memmove
+* [x] memmove
 * [ ] strncmp
 * [ ] strcasecmp
 * [ ] rindex
