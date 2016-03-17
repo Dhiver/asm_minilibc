@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Mon Mar 14 23:53:02 2016 Bastien DHIVER
-** Last update Wed Mar 16 23:48:51 2016 Bastien DHIVER
+** Last update Thu Mar 17 01:23:58 2016 Bastien DHIVER
 */
 
 #ifndef TESTS_H_
@@ -16,6 +16,9 @@
 
 size_t		strlen(const char *);
 void		tests_strlen(void);
+
+char		*strdup(const char *);
+void		tests_strdup(void);
 
 char		*strchr(const char *, int);
 void		tests_strchr(void);
@@ -31,5 +34,8 @@ void		tests_memmove(void);
 
 char		*rindex(const char *, int);
 void		tests_rindex(void);
+
+int		strncmp(const char *, const char *, size_t);
+void		tests_strncmp(void);
 
 #endif /* !TESTS_H_ */

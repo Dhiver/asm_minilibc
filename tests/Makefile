@@ -15,11 +15,13 @@ NOWHERE	= /dev/null
 
 SRCS	= $(SRCF)test_main.c		\
 	  $(SRCF)tests_strlen.c		\
+	  $(SRCF)tests_strdup.c		\
 	  $(SRCF)tests_strchr.c		\
 	  $(SRCF)tests_memset.c		\
 	  $(SRCF)tests_memcpy.c		\
 	  $(SRCF)tests_memmove.c	\
-	  $(SRCF)tests_rindex.c
+	  $(SRCF)tests_rindex.c		\
+	  $(SRCF)tests_strncmp.c
 
 OBJS	= $(SRCS:.c=.o)
 

@@ -5,11 +5,10 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Tue Mar 15 20:17:44 2016 Bastien DHIVER
-** Last update Thu Mar 17 00:02:44 2016 Bastien DHIVER
+** Last update Thu Mar 17 01:25:54 2016 Bastien DHIVER
 */
 
 #include "tests.h"
-#include <string.h>
 
 void	tests_memmove(void)
 {

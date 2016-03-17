@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Feb 25 14:48:56 2016 Bastien DHIVER
-## Last update Wed Mar 16 23:49:14 2016 Bastien DHIVER
+## Last update Thu Mar 17 00:21:53 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -25,7 +25,8 @@ SRCS	= strlen.S	\
 	  memcpy.S	\
 	  strcmp.S	\
 	  memmove.S	\
-	  rindex.S
+	  rindex.S	\
+	  strncmp.S
 
 OBJS	= $(SRCS:.S=.o)
 
