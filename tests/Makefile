@@ -6,6 +6,7 @@ CFLAGS	+= -W -Wextra -pedantic
 CFLAGS	+= -Werror
 CFLAGS	+= -g
 CFLAGS	+= -I../include/ -I.
+CFLAGS	+= 
 
 SLIB	= ../libasm.so
 
@@ -21,7 +22,8 @@ SRCS	= $(SRCF)test_main.c		\
 	  $(SRCF)tests_memcpy.c		\
 	  $(SRCF)tests_memmove.c	\
 	  $(SRCF)tests_rindex.c		\
-	  $(SRCF)tests_strncmp.c
+	  $(SRCF)tests_strncmp.c	\
+	  $(SRCF)tests_strcmp.c
 
 OBJS	= $(SRCS:.c=.o)
 
