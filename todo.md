@@ -6,10 +6,10 @@
 * [x] memcpy
 * [/] strcmp
 * [x] memmove
-* [/] strncmp
+* [x] strncmp
 * [ ] strcasecmp
 * [x] rindex
-* [ ] strstr
+* [/] strstr
 * [ ] strpbrk
 * [ ] strcspn
 
@@ -25,7 +25,7 @@
 * [x] memcpy
 * [ ] strcmp
 * [x] memmove
-* [ ] strncmp
+* [x] strncmp
 * [ ] strcasecmp
 * [x] rindex
 * [ ] strstr

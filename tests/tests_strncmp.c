@@ -5,28 +5,48 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Thu Mar 17 00:20:17 2016 Bastien DHIVER
-** Last update Thu Mar 17 01:26:16 2016 Bastien DHIVER
+** Last update Thu Mar 17 10:36:03 2016 Bastien DHIVER
 */
 
 #include "tests.h"
 
+void	tests_strncmp_again(char *str, char *str2)
+{
+  str2 = "zbcd";
+  assert(strncmp(str, str2, 4) == -1);
+  str = "aycd";
+  assert(strncmp(str2, str, 4) == -1);
+  str = "abcdzz";
+  str2 = "abcdzz";
+  assert(strncmp(str, str2, 4) == 0);
+  str2 = "abcdze";
+  assert(strncmp(str2, str, 4) == 0);
+}
+
 void	tests_strncmp(void)
 {
   char	*str;
+  char	*str2;
 
-  str = "toto";
+  str = "patate";
+  str2 = "z";
   assert(strncmp(str, str, 9999999) == 0);
-  assert(strncmp("patate", "z", 0) == 0);
-  assert(strncmp("", "", 1) == 0);
-  assert(strncmp("a", "", 1) == 1);
-  assert(strncmp("", "a", 1) == -1);
-  assert(strncmp("a", "a", 1) == 0);
-  assert(strncmp("abcd", "ab", 3) == 1);
-  assert(strncmp("ab", "abcd", 3) == -1);
-  assert(strncmp("abcd", "abcd", 3) == 0);
-  assert(strncmp("abcd", "abcd", 4) == 0);
-  assert(strncmp("abcd", "zbcd", 4) == -1);
-  assert(strncmp("abcd", "aycd", 4) == -1);
-  assert(strncmp("abcdzz", "abcdzz", 4) == 0);
-  assert(strncmp("abcdze", "abcdzz", 4) == 0);
+  assert(strncmp(str, str2, 0) == 'p' - 'z');
+  str = "";
+  str2 = "";
+  assert(strncmp(str, str2, 1) == 0);
+  str = "a";
+  str2 = "";
+  assert(strncmp(str, str2, 1) == 1);
+  assert(strncmp(str2, str, 1) == -1);
+  str = "a";
+  assert(strncmp(str, str, 1) == 0);
+  str = "abcd";
+  str2 = "ab";
+  assert(strncmp(str, str2, 3) == 1);
+  assert(strncmp(str2, str, 3) == -1);
+  str2 = "abcd";
+  assert(strncmp(str, str2, 3) == 0);
+  assert(strncmp(str, str2, 4) == 0);
+  tests_strncmp_again(str, str2);
 }

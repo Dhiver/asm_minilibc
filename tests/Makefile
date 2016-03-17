@@ -1,10 +1,20 @@
+##
+## Makefile for asm_minilibc in /home/work/work/projects/asm_minilibc_doc/asm_minilibc/tests
+## 
+## Made by Bastien DHIVER
+## Login   <dhiver_b@epitech.net>
+## 
+## Started on  Thu Mar 17 11:08:59 2016 Bastien DHIVER
+## Last update Thu Mar 17 11:09:12 2016 Bastien DHIVER
+##
+
 CC	= gcc
 
 RM	= rm -f
 
 CFLAGS	+= -W -Wextra -pedantic
 CFLAGS	+= -Werror
-CFLAGS	+= -g
+CFLAGS	+= -g -fno-builtin
 CFLAGS	+= -I../include/ -I.
 CFLAGS	+= 
 
@@ -23,7 +33,8 @@ SRCS	= $(SRCF)test_main.c		\
 	  $(SRCF)tests_memmove.c	\
 	  $(SRCF)tests_rindex.c		\
 	  $(SRCF)tests_strncmp.c	\
-	  $(SRCF)tests_strcmp.c
+	  $(SRCF)tests_strcmp.c		\
+	  $(SRCF)tests_strstr.c
 
 OBJS	= $(SRCS:.c=.o)
 

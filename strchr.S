@@ -1,6 +1,7 @@
 [BITS 64]
 
-global	strchr:function
+section	.text
+	global	strchr:function
 
 strchr:
 	push	rbp		; saving stack
