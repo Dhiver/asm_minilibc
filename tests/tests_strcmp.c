@@ -5,7 +5,7 @@
 ** Login   <jarry_m@epitech.net>
 ** 
 ** Started on  Thu Mar 17 10:06:24 2016 Maxime
-** Last update Thu Mar 17 10:29:54 2016 Maxime
+** Last update Fri Mar 18 10:43:32 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -22,7 +22,7 @@ void	test_again_strcmp(char *str, char *str1)
   str = "abcdzz";
   str1 = "abcdze";
   assert(strcmp(str, str) == 0);
-  assert(strcmp(str1, str) == 'z' - 'e');
+  assert(strcmp(str1, str) == 'e' - 'z');
 }
 
 void	tests_strcmp(void)
@@ -43,7 +43,6 @@ void	tests_strcmp(void)
   assert(strcmp(str1, str1) == 0);
   str = "abcd";
   str1 = "ab";
-  printf("%d == \n", strcmp(str, str1));
   assert(strcmp(str, str1) == 'c' - '\0');
   test_again_strcmp(str, str1);
 }
