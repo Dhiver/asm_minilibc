@@ -6,21 +6,24 @@ strcmp:
 	push	rbp		; saving stack
 	mov	rbp, rsp
 
+	xor	rcx, rcx
+	xor	rax, rax
+	xor	rbx, rbx
+
 _loop:
-	cmp	BYTE[rdi], 0
+	mov	al, [rdi + rcx]
+	mov	bl, [rsi + rcx]
+	cmp	al, 0
 	je	_end
-	cmp	BYTE[rdi], sil
+	cmp	bl, 0
+	je	_end
+	cmp	al, bl
 	jne	_end
-	inc	rdi
+	inc	rcx
 	jmp	_loop
 
 _end:
-	xor	rax, rax
-	mov	al, [rdi]
-	xor	rbx, rbx
-	mov  	bl, [rsi]
 	sub	rax, rbx
-
 	mov	rsp, rbp	; restore stack
 	pop	rbp
 	ret
