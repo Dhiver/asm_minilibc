@@ -4,12 +4,12 @@
 * [x] strchr
 * [x] memset
 * [x] memcpy
-* [/] strcmp
+* [x] strcmp
 * [x] memmove
 * [x] strncmp
-* [ ] strcasecmp
+* [/] strcasecmp
 * [x] rindex
-* [/] strstr
+* [ ] strstr
 * [ ] strpbrk
 * [ ] strcspn
 
@@ -23,7 +23,7 @@
 * [x] strchr
 * [x] memset
 * [x] memcpy
-* [ ] strcmp
+* [x] strcmp
 * [x] memmove
 * [x] strncmp
 * [ ] strcasecmp
