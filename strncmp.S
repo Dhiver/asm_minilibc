@@ -4,29 +4,29 @@ section	.text
 	global	strncmp:function
 
 strncmp:
-	push	rbp
+	push	rbp		; saving stack
 	mov	rbp, rsp
+
 	xor	rcx, rcx
 	xor	rax, rax
-	cmp	rdi, rsi
-	je	_restore_stack
+	xor	rbx, rbx
 
 _loop:
-	cmp	BYTE[rdi + rcx], 0
-	jmp	_end
-	cmp	BYTE[rsi + rcx], 0
-	jmp	_end
-	cmp	BYTE[rdi], sil
+	cmp	rdx, rcx
+	je	_end
+	mov	al, BYTE[rdi + rcx]
+	mov	bl, BYTE[rsi + rcx]
+	cmp	al, 0
+	je	_end
+	cmp	bl, 0
+	je	_end
+	cmp	al, bl
 	jne	_end
 	inc	rcx
-	cmp	rcx, rdx
-	je	_end
 	jmp	_loop
 
 _end:
-	mov	al, BYTE[rdi + rcx]
-	sub	al, BYTE[rsi + rcx]
-_restore_stack:
-	mov	rsp, rbp
+	sub	rax, rbx
+	mov	rsp, rbp	; restore stack
 	pop	rbp
 	ret
