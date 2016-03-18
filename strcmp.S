@@ -11,8 +11,8 @@ strcmp:
 	xor	rbx, rbx
 
 _loop:
-	mov	al, [rdi + rcx]
-	mov	bl, [rsi + rcx]
+	mov	al, BYTE[rdi + rcx]
+	mov	bl, BYTE[rsi + rcx]
 	cmp	al, 0
 	je	_end
 	cmp	bl, 0
