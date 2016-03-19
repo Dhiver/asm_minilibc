@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Mar 17 11:08:59 2016 Bastien DHIVER
-## Last update Thu Mar 17 11:09:12 2016 Bastien DHIVER
+## Last update Fri Mar 18 15:38:21 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -34,7 +34,8 @@ SRCS	= $(SRCF)test_main.c		\
 	  $(SRCF)tests_rindex.c		\
 	  $(SRCF)tests_strncmp.c	\
 	  $(SRCF)tests_strcmp.c		\
-	  $(SRCF)tests_strstr.c
+	  $(SRCF)tests_strstr.c		\
+	  $(SRCF)tests_strcasecmp.c
 
 OBJS	= $(SRCS:.c=.o)
 
