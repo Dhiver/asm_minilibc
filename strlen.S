@@ -6,11 +6,10 @@ strlen:
 	push	rbp			; saving stack
 	mov	rbp, rsp
 
-	mov	rcx, 0			; init counter register
+	xor	rcx, rcx		; init counter register
 _loop:
-	cmp	BYTE[rdi], 0		; compare with 0
+	cmp	BYTE[rdi + rcx], 0	; compare with 0
 	je	_end			; if this is 0 -> end
-	inc	rdi			; go to next character
 	inc	rcx			; increment counter
 	jmp	_loop			; call _loop again
 
