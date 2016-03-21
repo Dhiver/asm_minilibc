@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Mon Mar 14 23:53:02 2016 Bastien DHIVER
-** Last update Fri Mar 18 15:12:56 2016 Bastien DHIVER
+** Last update Mon Mar 21 14:45:12 2016 Bastien DHIVER
 */
 
 #ifndef TESTS_H_
@@ -41,10 +41,10 @@ void		tests_strncmp(void);
 int		strcmp(const char *, const char *);
 void		tests_strcmp(void);
 
-char		*strstr(const char *, const char *);
-void		tests_strstr(void);
-
 int		strcasecmp(const char *, const char *);
 void		tests_strcasecmp(void);
+
+char		*strstr(const char *, const char *);
+void		tests_strstr(void);
 
 #endif /* !TESTS_H_ */
