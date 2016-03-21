@@ -9,7 +9,7 @@
 * [x] strncmp
 * [x] strcasecmp
 * [x] rindex
-* [ ] strstr
+* [/] strstr
 * [ ] strpbrk
 * [ ] strcspn
 
