@@ -6,12 +6,14 @@ section	.text
 strchr:
 	push	rbp		; saving stack
 	mov	rbp, rsp
+
+	xor	rcx, rcx
 _loop:
-	cmp	BYTE[rdi], sil	; compare with the last 8 bit from rsi
+	cmp	BYTE[rdi + rcx], sil	; compare with the last 8 bit from rsi
 	je	_end_success
-	cmp	BYTE[rdi], 0
+	cmp	BYTE[rdi + rcx], 0
 	je	_exit_zero
-	inc	rdi
+	inc	rcx
 	jmp	_loop
 
 _restore_stack:
@@ -21,10 +23,11 @@ _restore_stack:
 
 _end_success:
 	mov	rax, rdi
+	add	rax, rcx
 	call	_restore_stack
 	ret
 
 _exit_zero:
-	mov	rax, 0
+	xor	rax, rax
 	call	_restore_stack
 	ret
