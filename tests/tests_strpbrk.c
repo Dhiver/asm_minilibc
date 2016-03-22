@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Mon Mar 21 23:06:11 2016 Bastien DHIVER
-** Last update Mon Mar 21 23:15:14 2016 Bastien DHIVER
+** Last update Tue Mar 22 14:06:02 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -25,4 +25,8 @@ void	tests_strpbrk(void)
   assert(strpbrk(str, str2) == str);
   str = "zuzu";
   assert(strpbrk(str2, str) == NULL);
+  assert(strpbrk(str, str) == str);
+  str = "trucmachinpatatz";
+  str2 = "z";
+  assert(strpbrk(str, str2) == &str[15]);
 }

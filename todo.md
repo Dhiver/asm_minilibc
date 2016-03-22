@@ -10,7 +10,7 @@
 * [x] strcasecmp
 * [x] rindex
 * [x] strstr
-* [/] strpbrk
+* [x] strpbrk
 * [ ] strcspn
 
 ## Bonus
@@ -29,7 +29,7 @@
 * [x] strcasecmp
 * [x] rindex
 * [x] strstr
-* [/] strpbrk
+* [x] strpbrk
 * [ ] strcspn
 * [ ] strdup
 
