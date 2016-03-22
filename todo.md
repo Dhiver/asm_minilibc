@@ -11,7 +11,7 @@
 * [x] rindex
 * [x] strstr
 * [x] strpbrk
-* [ ] strcspn
+* [/] strcspn
 
 ## Bonus
 
@@ -30,7 +30,7 @@
 * [x] rindex
 * [x] strstr
 * [x] strpbrk
-* [ ] strcspn
+* [/] strcspn
 * [ ] strdup
 
 * Check size\_t when param type in size\_t
