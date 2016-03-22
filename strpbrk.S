@@ -6,6 +6,8 @@ section .text
 strpbrk:
 	push	rbp
 	mov	rbp, rsp
+	cmp	rdi, 0
+	je	_not_found
 	xor	rcx, rcx
 	xor	rax, rax
 	jmp	_loop
