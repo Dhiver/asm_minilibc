@@ -16,18 +16,13 @@ _loop:
 	inc	rcx
 	jmp	_loop
 
-_restore_stack:
-	mov	rsp, rbp	; restore stack
-	pop	rbp
-	ret
-
 _end_success:
 	mov	rax, rdi
 	add	rax, rcx
-	call	_restore_stack
-	ret
-
+	jmp	_restore_stack
 _exit_zero:
 	xor	rax, rax
-	call	_restore_stack
+_restore_stack:
+	mov	rsp, rbp	; restore stack
+	pop	rbp
 	ret
