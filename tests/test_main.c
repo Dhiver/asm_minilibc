@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Mon Mar 14 23:53:15 2016 Bastien DHIVER
-** Last update Mon Mar 21 23:08:33 2016 Bastien DHIVER
+** Last update Tue Mar 22 14:22:40 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -24,6 +24,7 @@ int	main(void)
   tests_strcasecmp();
   tests_strstr();
   tests_strpbrk();
+  tests_strcspn();
   printf("\033[34;1m END TESTS \033[0m\n");
   return (0);
 }

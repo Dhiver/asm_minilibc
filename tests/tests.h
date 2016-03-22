@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Mon Mar 14 23:53:02 2016 Bastien DHIVER
-** Last update Mon Mar 21 23:08:31 2016 Bastien DHIVER
+** Last update Tue Mar 22 14:22:13 2016 Bastien DHIVER
 */
 
 #ifndef TESTS_H_
@@ -50,4 +50,6 @@ void		tests_strstr(void);
 char		*strpbrk(const char *, const char *);
 void		tests_strpbrk(void);
 
+size_t		strcspn(const char *, const char *);
+void		tests_strcspn(void);
 #endif /* !TESTS_H_ */
