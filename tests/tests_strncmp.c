@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Thu Mar 17 00:20:17 2016 Bastien DHIVER
-** Last update Fri Mar 18 13:41:23 2016 Bastien DHIVER
+** Last update Thu Mar 24 00:13:58 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -21,6 +21,12 @@ void	tests_strncmp_again(char *str, char *str2)
   assert(strncmp(str, str2, 4) == 0);
   str2 = "abcdze";
   assert(strncmp(str2, str, 4) == 0);
+  str = "toto";
+  str2 = "";
+  assert(strncmp(str, str2, 42) == 't' - '\0');
+  assert(strncmp(str2, str, 42) == '\0' - 't');
+  str2 = "totototo";
+  assert(strncmp(str, str2, 42) == '\0' - 't');
 }
 
 void	tests_strncmp(void)

@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Fri Mar 18 15:09:13 2016 Bastien DHIVER
-** Last update Mon Mar 21 12:34:09 2016 Bastien DHIVER
+** Last update Thu Mar 24 00:07:04 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -27,6 +27,13 @@ void	tests_strcasecmp_agin(char *str, char *str1)
   assert(strcasecmp(str1, str) == 'e' - 'z');
   str = "AbcdZZ";
   assert(strcasecmp(str1, str) == 'e' - 'z');
+  str = "TOTO";
+  str1 = "";
+  assert(strcasecmp(str, str1) == 't' - '\0');
+  assert(strcasecmp(str1, str) == '\0' - 't');
+  str = "ABZCHDHDH";
+  str1 = "avdvdvdv";
+  assert(strcasecmp(str, str1) == 'b' - 'v');
 }
 
 void	tests_strcasecmp(void)

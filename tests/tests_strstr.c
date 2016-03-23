@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Thu Mar 17 01:29:09 2016 Bastien DHIVER
-** Last update Mon Mar 21 22:33:56 2016 Bastien DHIVER
+** Last update Thu Mar 24 00:14:52 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -23,4 +23,7 @@ void	tests_strstr(void)
   assert(strstr(&str2[3], str) == &str2[6]);
   str = "zz";
   assert(strstr(str2, str) == 0);
+  str = "abcdefghijkl";
+  str2 = "";
+  //assert(strstr(str, str2) == str);
 }
