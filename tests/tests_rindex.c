@@ -5,7 +5,7 @@
 ** Login   <dhiver_b@epitech.net>
 ** 
 ** Started on  Wed Mar 16 23:47:29 2016 Bastien DHIVER
-** Last update Thu Mar 24 00:11:15 2016 Bastien DHIVER
+** Last update Thu Mar 24 00:38:01 2016 Bastien DHIVER
 */
 
 #include "tests.h"
@@ -28,4 +28,6 @@ void	tests_rindex(void)
   assert(rindex(str, 'z') == NULL);
   str = "abcdefghijkl";
   assert(rindex(str, 'a') == str);
+  str = "toto";
+  assert(rindex(str, '\0') == &str[4]);
 }
