@@ -9,8 +9,11 @@ strstr:
 
 	xor	rcx, rcx
 	xor	rax, rax
+	xor	r8, r8
 	cmp	rdi, 0
 	je	_not_found
+	cmp	BYTE[rsi], 0
+	je	_found
 	jmp	_loop
 
 _small_loop:
