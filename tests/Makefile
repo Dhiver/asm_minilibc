@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Mar 17 11:08:59 2016 Bastien DHIVER
-## Last update Fri Mar 25 09:00:22 2016 Bastien DHIVER
+## Last update Fri Mar 25 09:32:16 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -45,6 +45,8 @@ OBJS	= $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
+	make re -C ..
+	make bonus -C ..
 	$(CC) -o $(NAME) $(OBJS) $(SLIB) $(SLIB_B)
 
 all: $(NAME)

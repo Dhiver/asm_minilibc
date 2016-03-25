@@ -24,7 +24,7 @@ _start:
 
 _loop:
 	cmp	BYTE[rdi + rcx], 0
-	je	_not_found
+	je	_found
 	mov	al, BYTE[rdi + rcx]
 	jmp	_little_one
 _again:
