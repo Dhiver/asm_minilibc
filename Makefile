@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Feb 25 14:48:56 2016 Bastien DHIVER
-## Last update Tue Mar 22 14:51:18 2016 Bastien DHIVER
+## Last update Fri Mar 25 08:55:27 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -18,8 +18,13 @@ ASFLAGS	+= -f elf64
 
 NAME	= libasm.so
 
+NAME_B	= libasmbonus.so
+
+BONUS_F	= bonus/
+
+BONUS	= $(BONUS_F)strdup.S
+
 SRCS	= strlen.S	\
-	  strdup.S	\
 	  strchr.S	\
 	  memset.S	\
 	  memcpy.S	\
@@ -34,6 +39,8 @@ SRCS	= strlen.S	\
 
 OBJS	= $(SRCS:.S=.o)
 
+OBJS_B	= $(BONUS:.S=.o)
+
 %.o: %.S
 	$(ASM) $(ASFLAGS) $< -o $@
 
@@ -42,12 +49,15 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
+bonus: $(OBJS_B)
+	$(CC) -fPIC -shared $(OBJS_B) -o $(NAME_B)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(NAME_B)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

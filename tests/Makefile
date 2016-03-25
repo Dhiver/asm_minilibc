@@ -5,7 +5,7 @@
 ## Login   <dhiver_b@epitech.net>
 ## 
 ## Started on  Thu Mar 17 11:08:59 2016 Bastien DHIVER
-## Last update Tue Mar 22 14:22:36 2016 Bastien DHIVER
+## Last update Fri Mar 25 09:00:22 2016 Bastien DHIVER
 ##
 
 CC	= gcc
@@ -19,6 +19,8 @@ CFLAGS	+= -I../include/ -I.
 CFLAGS	+= 
 
 SLIB	= ../libasm.so
+
+SLIB_B	= ../libasmbonus.so
 
 NAME	= run_for_tests
 
@@ -43,7 +45,7 @@ OBJS	= $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(SLIB)
+	$(CC) -o $(NAME) $(OBJS) $(SLIB) $(SLIB_B)
 
 all: $(NAME)
 
